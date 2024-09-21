@@ -6,3 +6,6 @@ run the axon server by below command
 java -jar axonserver.jar
 
 Then it will start on port 8024
+
+
+we are using CQRS architecture to store all the data.
