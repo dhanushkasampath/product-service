@@ -22,6 +22,12 @@ public class ProductCommandController {
     }
 
     /**
+     * localhost:8081/products
+     * {
+     *     "name":"Mango",
+     *     "price":"100",
+     *     "quantity":"2"
+     * }
      * we need to send this particular data(CreateProductCommand) to "Command Gateway"
      * @param productRestModel
      * @return

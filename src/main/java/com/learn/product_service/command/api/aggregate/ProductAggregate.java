@@ -2,6 +2,7 @@ package com.learn.product_service.command.api.aggregate;
 
 import com.learn.product_service.command.api.commands.CreateProductCommand;
 import com.learn.product_service.command.api.events.ProductCreatedEvent;
+import org.axonframework.commandhandling.CommandHandler;
 import org.axonframework.eventsourcing.EventSourcingHandler;
 import org.axonframework.modelling.command.AggregateLifecycle;
 import org.axonframework.modelling.command.TargetAggregateIdentifier;
@@ -19,6 +20,7 @@ public class ProductAggregate {
     private Integer quantity;
 
     //for this aggregate to work we need to create a constructor
+    @CommandHandler
     public ProductAggregate(CreateProductCommand createProductCommand){
         // you can perform all the validations here
         ProductCreatedEvent productCreatedEvent =
